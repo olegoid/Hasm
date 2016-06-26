@@ -21,4 +21,5 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
 
   spec.add_development_dependency "commander"
+  spec.add_development_dependency "colored"
 end
