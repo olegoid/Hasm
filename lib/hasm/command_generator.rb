@@ -26,8 +26,12 @@ module Hasm
         c.option '--source-file STRING', String, 'Path to *.asm file'
 
         c.action do |_args, options|
-          PencilPusher::SetupAssistant.new(convert_options(options))
+          Hasm::Compiler.new(convert_options(options))
         end
+
+        default_command :compile
+
+        run!
       end
     end
   end
