@@ -26,7 +26,8 @@ module Hasm
         c.option '--source-file STRING', String, 'Path to *.asm file'
 
         c.action do |_args, options|
-          Hasm::Compiler.new(convert_options(options))
+          compiler = Hasm::Compiler.new(convert_options(options))
+          compiler.run_first_pass
         end
 
         default_command :compile
