@@ -28,6 +28,7 @@ module Hasm
         c.action do |_args, options|
           compiler = Hasm::Compiler.new(convert_options(options))
           compiler.run_first_pass
+          compiler.run_second_pass
         end
 
         default_command :compile
